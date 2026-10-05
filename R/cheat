@@ -1,0 +1,13 @@
+cheat <- function(topic = NULL) {
+  notes <- list(
+    apply = "sapply(X, function(x) ...) returns a vector; ...",
+    array = "array(NA, dim = c(4, 50, 3)); ...",
+    debug = "debug(f) / undebug(f) / debugonce(f); ..."
+  )
+  if (is.null(topic)) {
+    cat("Topics:", paste(names(notes), collapse = ", "), "\n")
+  } else {
+    cat(notes[[topic]], "\n")
+  }
+  invisible(NULL)
+}
